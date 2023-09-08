@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- data-theme="light" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Phone API</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h1 class="text-6xl text-center">Hunting Phone</h1>
+    </header>
+
+    <main class="container mx-auto mt-10">
+        <section class="bg-gray-100 p-4 m-4">
+            <input id="search-field" type="text" placeholder="Search..." class="input input-ghost w-full max-w-xs" />
+            <button onclick="handelSearch()" class="btn btn-active btn-accent">Search</button>
+
+            <!-- another search field -->
+            <!-- <input id="search-field2" type="text" placeholder="Search..." class="input input-ghost w-full max-w-xs" />
+            <button onclick="handelSearch2()" class="btn btn-active btn-neutral">Search</button> -->
+
+        </section>
+
+        <!-- search section -->
+        <section>
+            <!-- search spinner -->
+            <div id="loading-spinner" class="text-center my-40 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- <div class="card card-compact w-96 bg-gray-100 shadow-xl">
+                    <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div> -->
+
+            </div>
+
+            <!-- show all button -->
+            <div id="show-all-phones" class="hidden mt-4 text-center my-5">
+                <button onclick="handelShowAll()" class="btn btn-active btn-accent">Show ALL</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+    <!-- scripts -->
+
+    <script src="./js/phone.js"></script>
+</body>
+</html>
