@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- data-theme="light" -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- data-theme="light" -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hunting Phone API</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1 class="text-6xl text-center">Hunting Phone</h1>
+      <h1 class="text-6xl text-center">Hunting Phone</h1>
     </header>
 
     <main class="container mx-auto mt-10">
-        <section class="bg-gray-100 p-4 m-4">
-            <input id="search-field" type="text" placeholder="Search..." class="input input-ghost w-full max-w-xs" />
-            <button onclick="handelSearch()" class="btn btn-active btn-accent">Search</button>
+      <section class="bg-gray-100 p-4 m-4">
+        <input
+          id="search-field"
+          type="text"
+          placeholder="Search..."
+          class="input input-ghost w-full max-w-xs"
+        />
+        <button onclick="handelSearch()" class="btn btn-active btn-accent">
+          Search
+        </button>
 
-            <!-- another search field -->
-            <!-- <input id="search-field2" type="text" placeholder="Search..." class="input input-ghost w-full max-w-xs" />
+        <!-- another search field -->
+        <!-- <input id="search-field2" type="text" placeholder="Search..." class="input input-ghost w-full max-w-xs" />
             <button onclick="handelSearch2()" class="btn btn-active btn-neutral">Search</button> -->
+      </section>
 
-        </section>
-
-        <!-- search section -->
-        <section>
-            <!-- search spinner -->
-            <div id="loading-spinner" class="text-center my-40 hidden">
-                <span class="loading loading-spinner loading-lg"></span>
-            </div>
-            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- <div class="card card-compact w-96 bg-gray-100 shadow-xl">
+      <!-- search section -->
+      <section>
+        <!-- search spinner -->
+        <div id="loading-spinner" class="text-center my-40 hidden">
+          <span class="loading loading-spinner loading-lg"></span>
+        </div>
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <!-- <div class="card card-compact w-96 bg-gray-100 shadow-xl">
                     <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title">Shoes!</h2>
@@ -42,23 +55,37 @@
                       </div>
                     </div>
                   </div> -->
+        </div>
 
-            </div>
+        <!-- show all button -->
+        <div id="show-all-phones" class="hidden mt-4 text-center my-5">
+          <button onclick="handelShowAll()" class="btn btn-active btn-accent">
+            Show ALL
+          </button>
+        </div>
+      </section>
 
-            <!-- show all button -->
-            <div id="show-all-phones" class="hidden mt-4 text-center my-5">
-                <button onclick="handelShowAll()" class="btn btn-active btn-accent">Show ALL</button>
-            </div>
-        </section>
+      <!-- show details modal -->
+      <!-- Open the modal using ID.showModal() method -->
+      <button class="btn" onclick="show_details_modal.showModal()">open modal</button>
+      <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 class="font-bold text-lg">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
 
-    <footer>
-
-    </footer>
-
+    <footer></footer>
 
     <!-- scripts -->
 
     <script src="./js/phone.js"></script>
-</body>
+  </body>
 </html>
